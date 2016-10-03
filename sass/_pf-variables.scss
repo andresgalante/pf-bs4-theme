@@ -1,0 +1,83 @@
+// Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Bootstrap defaults without modifying key, versioned files.
+
+
+// Table of Contents
+//
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+
+
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+$gray-dark:                 $color-pf-black;
+$gray:                      $color-pf-black-700;
+$gray-light:                $color-pf-black-500;
+$gray-lighter:              $color-pf-black-300;
+$gray-lightest:             $color-pf-black-100;
+
+$brand-primary:             $color-pf-blue;
+$brand-success:             $color-pf-green;
+$brand-info:                $color-pf-blue-500;
+$brand-warning:             $color-pf-orange;
+$brand-danger:              $color-pf-red;
+// $brand-inverse:             $gray-dark;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-flex:               true;
+$enable-rounded:            true;
+// maybe $enable-shadows:            false !default;
+// maybe $enable-gradients:          false !default;
+// $enable-transitions:        false !default;
+// ? $enable-hover-media-query:  false !default;
+// ? $enable-grid-classes:       true !default;
+// $enable-print-styles:       true !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-gutter-width: 40px;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: overpass, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 12px !default;
+
+
+$font-size-h1: 2rem !default; // ~24px
+$font-size-h2: 1.8333rem !default; // ~22px
+$font-size-h3: 1.3333rem !default; // ~16px
+$font-size-h4: 1.2rem !default;
+$font-size-h5: 1.0833rem !default; // ~13px
+
+$line-height-base: 1.66666667 !default;
+
+$headings-font-weight: 600;
+
+
+// Overwrites default border radius
+$border-radius: 1px;
