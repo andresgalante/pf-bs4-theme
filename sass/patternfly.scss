@@ -5,7 +5,7 @@
 // Import Overpass Font
 // http://overpassfont.org/
 
-@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+// @import url("http://overpass-30e2.kxcdn.com/overpass.css");
 
 // Core variables and mixins
 // @import "node_modules/bootstrap/scss/custom";
@@ -24,10 +24,11 @@
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
-@import "pf-tables";
 @import "node_modules/bootstrap/scss/tables";
+@import "pf-tables";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
+@import "pf-buttons";
 
 // Components
 @import "node_modules/bootstrap/scss/animation";
