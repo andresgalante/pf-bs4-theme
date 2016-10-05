@@ -22,6 +22,15 @@
 //
 // Variable format should follow the `$component-modifier-state-property` order.
 
+// PatternFly box shadows
+
+$box-shadow-sm: 0 2px 2px rgba($color-pf-black, 0.1);
+$box-shadow-md: 0 2px 4px rgba($color-pf-black, 0.1);
+$box-shadow-lg: 0 2px 6px rgba($color-pf-black, 0.1);
+
+$box-shadow-inset-sm: inset 0 2px 2px rgba($color-pf-black, 0.2);
+$box-shadow-inset-md: inset 0 2px 4px rgba($color-pf-black, 0.2);
+$box-shadow-inset-lg: inset 0 2px 6px rgba($color-pf-black, 0.2);
 
 // Colors
 //
@@ -41,12 +50,19 @@ $brand-danger:              $color-pf-red;
 // $brand-inverse:             $gray-dark;
 
 
+
+// Font weight
+//
+
+$pf-font-weight-bold:   600;
+$pf-font-weight-normal: 400;
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-flex:               true;
 $enable-rounded:            true;
-// $enable-shadows:            true;
+$enable-shadows:            true;
 // $enable-gradients:          true;
 // $enable-transitions:        false !default;
 // ? $enable-hover-media-query:  false !default;
@@ -65,7 +81,7 @@ $grid-gutter-width: 40px;
  $font-family-sans-serif: overpass, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root: 12px;
+$font-size-root: 14px;
 
 $font-size-h1: 2rem; // ~24px
 $font-size-h2: 1.8333rem; // ~22px
@@ -75,7 +91,7 @@ $font-size-h5: 1.0833rem; // ~13px
 
 $line-height-base: 1.66666667;
 
-$headings-font-weight: 600;
+$headings-font-weight: $pf-font-weight-bold;
 
 
 // Overwrites default border radius
@@ -88,7 +104,7 @@ $border-radius-sm: $border-radius;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            .75rem !default;
+$table-cell-padding:            .7rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
 
@@ -107,47 +123,48 @@ $table-border-color:            $color-pf-black-300;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  1rem !default;
-$btn-padding-y:                  .5rem !default;
+$btn-padding-x:                  .7rem !default;
+$btn-padding-y:                  .3rem !default;
 $btn-line-height:                1.25 !default;
 $btn-font-weight:                normal !default;
-$btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
-$btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
+$btn-box-shadow:                 inset 0 1px 0 rgba($color-pf-white, .15), $box-shadow-sm;
+$btn-active-box-shadow:          $box-shadow-inset-lg;
 
-$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            $gray-dark !default;
-$btn-secondary-bg:               #fff !default;
-$btn-secondary-border:           #ccc !default;
+$btn-primary-start-bg:           $color-pf-blue-300;
+$btn-primary-end-bg:             $brand-primary;
+$btn-primary-border:             $color-pf-blue-500;
 
-$btn-info-color:                 #fff !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                $btn-info-bg !default;
+$btn-secondary-start-bg:         $color-pf-black-100;
+$btn-secondary-end-bg:           $color-pf-black-200;
+$btn-secondary-border:           $color-pf-black-400;
 
-$btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             $btn-success-bg !default;
+$btn-info-start-bg:              $color-pf-blue-400;
+$btn-info-end-bg:                $brand-info;
+$btn-info-border:                $color-pf-blue-600;
 
-$btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             $btn-warning-bg !default;
+$btn-success-start-bg:           $color-pf-green-300;
+$btn-success-end-bg:             $brand-success;
+$btn-success-border:             $color-pf-green-500;
 
-$btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              $btn-danger-bg !default;
+$btn-warning-start-bg:           $color-pf-orange-300;
+$btn-warning-end-bg:             $brand-warning;
+$btn-warning-border:             $color-pf-orange-500;
+
+$btn-danger-start-bg:            $color-pf-red-100;
+$btn-danger-end-bg:              $color-pf-red-200;
+$btn-danger-border:              $color-pf-red-300;
 
 $btn-link-disabled-color:        $gray-light !default;
 
-$btn-padding-x-sm:               .5rem !default;
-$btn-padding-y-sm:               .25rem !default;
+// $btn-padding-x-sm:               .5rem !default;
+// $btn-padding-y-sm:               .25rem !default;
 
-$btn-padding-x-lg:               1.5rem !default;
-$btn-padding-y-lg:               .75rem !default;
+// $btn-padding-x-lg:               1.5rem !default;
+// $btn-padding-y-lg:               .75rem !default;
 
-$btn-block-spacing-y:            .5rem !default;
-$btn-toolbar-margin:             .5rem !default;
+// $btn-block-spacing-y:            .5rem !default;
+// $btn-toolbar-margin:             .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:              $border-radius;
