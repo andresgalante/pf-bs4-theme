@@ -23,30 +23,38 @@
 // Variable format should follow the `$component-modifier-state-property` order.
 
 // PatternFly box shadows
+// TODO: See what kind of shadows we need and define standards
+$pf-box-shadow: 0 .1em .2em rgba($color-pf-black-1000, 0.1);
 
-$box-shadow-sm: 0 2px 2px rgba($color-pf-black, 0.1);
-$box-shadow-md: 0 2px 4px rgba($color-pf-black, 0.1);
-$box-shadow-lg: 0 2px 6px rgba($color-pf-black, 0.1);
+$pf-box-shadow-inset-sm: inset 0 .3em .3em rgba($color-pf-black-1000, 0.2);
+$pf-box-shadow-inset-md: inset 0 .3em .6em rgba($color-pf-black-1000, 0.2);
+$pf-box-shadow-inset-lg: inset 0 .3em .9em rgba($color-pf-black-1000, 0.2);
 
-$box-shadow-inset-sm: inset 0 2px 2px rgba($color-pf-black, 0.2);
-$box-shadow-inset-md: inset 0 2px 4px rgba($color-pf-black, 0.2);
-$box-shadow-inset-lg: inset 0 2px 6px rgba($color-pf-black, 0.2);
+
+// Patternfly Gradient
+// TODO: Define standard gradient for patternfly
+$pf-gradient-color-start: $color-pf-black-100;
+$pf-gradient-color-end: $color-pf-black-200;
+$pf-gradient-percent-start: 0%;
+$pf-gradient-percent-end: 100%;
+
+
 
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 $color-pf-black;
+$gray-dark:                 $color-pf-black-1000;
 $gray:                      $color-pf-black-700;
 $gray-light:                $color-pf-black-500;
 $gray-lighter:              $color-pf-black-300;
 $gray-lightest:             $color-pf-black-100;
 
-$brand-primary:             $color-pf-blue;
-$brand-success:             $color-pf-green;
+$brand-primary:             $color-pf-blue-400;
+$brand-success:             $color-pf-green-400;
 $brand-info:                $color-pf-blue-500;
-$brand-warning:             $color-pf-orange;
-$brand-danger:              $color-pf-red;
+$brand-warning:             $color-pf-orange-400;
+$brand-danger:              $color-pf-red-100;
 // $brand-inverse:             $gray-dark;
 
 
@@ -56,6 +64,7 @@ $brand-danger:              $color-pf-red;
 
 $pf-font-weight-bold:   600;
 $pf-font-weight-normal: 400;
+$pf-font-weight-light:  200;
 
 // Options
 //
@@ -70,10 +79,36 @@ $enable-shadows:            true;
 // $enable-print-styles:       true !default;
 
 
-// Grid columns
+
+// Spacing
 //
-// Set the number of columns and specify the width of the gutters.
-$grid-gutter-width: 40px;
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// $spacer:   1rem !default;
+// $spacer-x: $spacer !default;
+// $spacer-y: $spacer !default;
+// $spacers: (
+//   0: (
+//     x: 0,
+//     y: 0
+//   ),
+//   1: (
+//     x: $spacer-x,
+//     y: $spacer-y
+//   ),
+//   2: (
+//     x: ($spacer-x * 1.5),
+//     y: ($spacer-y * 1.5)
+//   ),
+//   3: (
+//     x: ($spacer-x * 3),
+//     y: ($spacer-y * 3)
+//   )
+// ) !default;
+$border-width: 1px;
+
 
 // Typography
 //
@@ -123,20 +158,20 @@ $table-border-color:            $color-pf-black-300;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  .7rem !default;
-$btn-padding-y:                  .3rem !default;
-$btn-line-height:                1.25 !default;
+// $btn-padding-x:                  .7rem !default;
+// $btn-padding-y:                  .3rem !default;
+// $btn-line-height:                1.25 !default;
 $btn-font-weight:                normal !default;
-$btn-box-shadow:                 inset 0 1px 0 rgba($color-pf-white, .15), $box-shadow-sm;
-$btn-active-box-shadow:          $box-shadow-inset-lg;
+$btn-box-shadow:                 inset 0 1px 0 rgba($color-pf-white, .15), $pf-box-shadow;
+$btn-active-box-shadow:          $pf-box-shadow-inset-lg;
 
 
 $btn-primary-start-bg:           $color-pf-blue-300;
 $btn-primary-end-bg:             $brand-primary;
 $btn-primary-border:             $color-pf-blue-500;
 
-$btn-secondary-start-bg:         $color-pf-black-100;
-$btn-secondary-end-bg:           $color-pf-black-200;
+$btn-secondary-start-bg:         $pf-gradient-color-start;
+$btn-secondary-end-bg:           $pf-gradient-color-end;
 $btn-secondary-border:           $color-pf-black-400;
 
 $btn-info-start-bg:              $color-pf-blue-400;
@@ -171,6 +206,13 @@ $btn-border-radius:              $border-radius;
 $btn-border-radius-lg:           $border-radius-lg;
 $btn-border-radius-sm:           $border-radius-sm;
 
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// TODO: Check updates in alpha 5 when its avaliable, since the units
+// changed from px to rems
+
 
 // Breadcrumbs
 
@@ -182,3 +224,54 @@ $breadcrumb-bg:                 $color-pf-white;
 $breadcrumb-divider-color:      $color-pf-black-500;
 $breadcrumb-active-color:       $color-pf-black-700;
 $breadcrumb-divider:            "»";
+
+
+// Cards
+// $card-spacer-x:            1.25rem !default;
+// $card-spacer-y:            .75rem !default;
+$card-border-width:        1px;
+$card-border-color:        $color-pf-black-300;
+$card-cap-bg:              $color-pf-black-150;
+
+$pf-card-border-color:     $color-pf-black-300;
+$pf-card-cap-bg:           $color-pf-white;
+$pf-card-footer-bg:        $color-pf-black-100;
+
+
+//$card-bg:                  $color-pf-white;
+
+//$card-link-hover-color:    #fff !default;
+
+$card-img-overlay-padding: 1.25rem !default;
+
+$card-deck-margin:         .625rem !default;
+
+$card-columns-sm-up-column-gap: 1.25rem !default;
+
+
+// Pagination
+
+// $pagination-padding-x:                .75rem !default;
+// $pagination-padding-y:                .5rem !default;
+// $pagination-padding-x-sm:             .75rem !default;
+// $pagination-padding-y-sm:             .275rem !default;
+// $pagination-padding-x-lg:             1.5rem !default;
+// $pagination-padding-y-lg:             .75rem !default;
+
+
+$pagination-color:                     $color-pf-black-700;
+$pagination-bg:                        #fff !default;
+// $pagination-border-width:              $border-width !default;
+$pagination-border-color:              $btn-secondary-border;
+
+$pagination-hover-color:               $pagination-color;
+$pagination-hover-bg:                  $pf-gradient-color-end;
+$pagination-hover-border:              $pagination-border-color;
+
+$pagination-active-color:              $pagination-color;
+$pagination-active-bg:                 $pagination-hover-bg;
+$pagination-active-border:             $btn-secondary-border !default;
+
+$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #ddd !default;

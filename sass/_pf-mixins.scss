@@ -14,8 +14,8 @@
   @include gradient-y(
     $start-color: $background-start,
       $end-color: $background-end,
-    $start-percent: 0%,
-      $end-percent: 100%);
+    $start-percent: $pf-gradient-percent-start,
+      $end-percent: $pf-gradient-percent-end);
 
   @include hover {
     background-image: none;
