@@ -139,8 +139,8 @@ $border-radius-sm: $border-radius;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            .7rem !default;
-$table-sm-cell-padding:         .3rem !default;
+// $table-cell-padding:            .7rem !default;
+// $table-sm-cell-padding:         .3rem !default;
 
 
 // $table-bg:                      transparent !default;
@@ -260,7 +260,7 @@ $card-columns-sm-up-column-gap: 1.25rem !default;
 
 
 $pagination-color:                     $color-pf-black-700;
-$pagination-bg:                        #fff !default;
+// $pagination-bg:                        #fff !default;
 // $pagination-border-width:              $border-width !default;
 $pagination-border-color:              $btn-secondary-border;
 
@@ -272,6 +272,6 @@ $pagination-active-color:              $pagination-color;
 $pagination-active-bg:                 $pagination-hover-bg;
 $pagination-active-border:             $btn-secondary-border !default;
 
-$pagination-disabled-color:            $gray-light !default;
-$pagination-disabled-bg:               #fff !default;
-$pagination-disabled-border:           #ddd !default;
+// $pagination-disabled-color:            $gray-light !default;
+// $pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           $color-pf-black-300;
